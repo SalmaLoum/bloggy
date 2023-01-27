@@ -1,0 +1,53 @@
+<div class='text-center'>
+  <h1>
+    {{name}}
+  </h1>
+
+  <div id='bloggy' data-id="{{id}}"></div>
+
+  <h3>
+ 
+    | on
+    {{blog_date}}
+   
+  </h3>
+  <p>
+    {{description}}
+  </p>
+  
+  <div>
+    <br />
+    <div>
+      <h3>
+        Leave a comment below!
+      </h3>
+
+      <br />
+
+      <div class='form-group'>
+        <label for='exampleFormControlTextarea2'></label>
+        <textarea
+          placeholder='Type your comment here...'
+          class='form-control comment'
+          id='comment'
+          rows='3'
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <p>
+    <button class="button-56" role="button'>
+      Comment
+    </button>
+  </p>
+
+  {{#each comments as |comment}}
+    <ul class='list-group list-group-flush'>
+      <li class='list-group-item list-group-item-info'>
+        | {{comments.comment}}
+      </li>
+    </ul>
+  {{/each}}
+</div>

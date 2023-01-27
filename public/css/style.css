@@ -1,29 +1,30 @@
 /* Universal Selector */
 * {
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
 }
 :root {
   /* declare a variable with `--` syntax */
-  --dark: #075462;
-  --teal: #00c2cb;
+  --green: #7bb397;
+  --pink: #fee6e3;
   --light: #fff;
+  --purple: #310762;
   --radius: 50px;
   --center: center;
 }
 
-/* Element Selectors */
-
 body {
   position: relative;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Mukta', sans-serif;
   font-size: 20px;
 
+  background: rgb(7, 98, 31);
   background: linear-gradient(
-    0deg,
-    rgba(7, 84, 98, 1) 0%,
-    rgba(0, 194, 203, 1) 56%,
-    rgba(202, 253, 255, 1) 100%
+    180deg,
+    rgba(7, 98, 31, 1) 0%,
+    rgba(123, 179, 151, 1) 52%,
+    rgba(202, 255, 221, 1) 100%
   );
 }
 
@@ -39,13 +40,17 @@ h2 {
   font-size: 40px;
 }
 
-h3 {
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  text-shadow: 1px 2px 2px #1c6ea4;
-  font-size: 20px;
-  padding: 20px;
-  margin: 20px;
+h3,
+.header-box {
+  margin: 20;
+  padding: 20;
+  position: relative;
+  width: 220px;
+  height: 80px;
+  background: var(--green);
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+  color: black;
+  box-shadow: 20px 20px var(--pink);
 }
 
 h4 {
@@ -58,7 +63,6 @@ h4 {
 
 a {
   color: black;
-  font-family: 'Kaushan Script', cursive;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -68,8 +72,8 @@ a {
 
 a:hover,
 #logout:hover {
-  color: var(--light);
-  text-shadow: 1px 1px 1px var(--teal);
+  color: var(--pink);
+  text-shadow: 1px 1px 1px black;
   text-decoration: none;
 }
 footer {
@@ -90,23 +94,78 @@ hr {
 /* ID Selectors */
 #header-links,
 #logout {
-  font-family: 'Kaushan Script', cursive;
-  color: white;
+  color: var(--pink);
   background-color: black;
+  letter-spacing: 0.05em;
 }
 
 #header-links:hover {
-  color: var(--teal);
-  text-shadow: 1px 1px 1px var(--light);
-  text-decoration: none;
+  color: var(--pink);
+  text-shadow: 2px 2px 0px grey;
 }
 
 /* Class Selectors */
-.btn {
+.button-56 {
   margin: 5px;
+  align-items: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-56 {
+  color: #111;
+  background-color: var(--pink);
+  border: 2px solid var(--pink);
 }
 
-.btn:hover {
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: '';
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: var(--pink);
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+/* .btn:hover {
   background-color: var(--light);
   color: black;
 }
@@ -114,7 +173,7 @@ hr {
 .btn-light:hover {
   background-color: black;
   color: var(--light);
-}
+} */
 
 .center {
   display: block;
@@ -152,15 +211,21 @@ hr {
 }
 
 .input-error {
-  border: 4px red solid;
+  border: 4px #310762 solid;
 }
 .error-text {
-  color: red;
+  color: #310762;
   font-size: bold;
   text-shadow: 1px 2px 2px black;
   margin: 20px;
 }
-
-.image-height {
-  max-height: 500px;
+.comment-text {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.card-header {
+  background-color: var(--purple);
+  color: var(--pink);
+}
+.card-header:hover {
+  color: var(--green);
 }

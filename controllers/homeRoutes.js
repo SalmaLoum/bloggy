@@ -1,12 +1,10 @@
-//This code creates a new Express Router, imports the bloggy and User model from the models directory, and imports an authentication middleware from the utils directory.
-
 const router = require('express').Router();
 const { Bloggy, User, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // get all blogs and join with user data
+     // Get all blogs and JOIN with user data
     const bloggyData = await Bloggy.findAll({
       include: [
         {
@@ -17,12 +15,12 @@ router.get('/', async (req, res) => {
     });
 
     // serialize the data so the template can read it
-    const bloggy= bloggyData.map((bloggy) =>
+    const blogs= bloggyData.map((bloggy) =>
       bloggy.get({ plain: true })
     );
     // pass serialized data and session flag into template
     res.render('homepage', {
-      bloggy,
+      blogs,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -45,9 +43,10 @@ router.get('/bloggy/:id', async (req, res) => {
         },
       ],
     });
-    console.log(bloggyData);
+    
+
     const bloggy =  bloggyData.get({ plain: true });
-    console.log(bloggy);
+   
     res.render('bloggy', {
       ...bloggy,
       logged_in: req.session.logged_in,
@@ -57,9 +56,11 @@ router.get('/bloggy/:id', async (req, res) => {
   }
 });
 
+// Use withAuth middleware to prevent access to route
 // corresponds with FE profile.js
 router.get('/profile', withAuth, async (req, res) => {
   try {
+      // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Bloggy }],

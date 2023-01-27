@@ -1,0 +1,47 @@
+<div class='d-flex row'>
+  <div class='col-md-4'>
+    <h2>
+      Welcome,
+      {{name}}!
+    </h2>
+  </div>
+</div>
+
+<div class='d-flex row mt-4'>
+  <div class='d-flex row mt-4'>
+    {{#if edit}}
+    {{/if}}
+
+    {{>bloggy-form}}
+      {{#if blogs.length}}
+        <div class='col-md-6'>
+          <h4>
+            Current Blogs
+          </h4>
+
+          {{#each blogs as |bloggy|}}
+            <div class='row mb-2'>
+              <div class='col-md-8'>
+                <h2>
+                  <a href="/bloggy/{{bloggy.id}}">
+                    {{bloggy.name}}
+                  </a>
+                </h2>
+              </div>
+
+              <div class='col-md-2'>
+
+                <button class='button-56'  id ='bloggy-list' role='button' type='submit' data-id='{{bloggy.id}}'>
+                  DELETE
+                </button>
+              </div>
+            </div>
+          {{/each}}
+
+        </div>
+      {{/if}}
+  </div>
+  <script src='./js/profile.js'></script>
+</div>
+
+

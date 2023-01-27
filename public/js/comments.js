@@ -1,5 +1,5 @@
 const submitComment = async () => {
-  const comments = document.querySelector('#comment').value.trim()
+  const comments = document.querySelector('#comment')
   const bloggy_id = document.querySelector('#bloggy')
   let blogId = bloggy_id.getAttribute('data-id')
   console.log(blogId)
@@ -26,4 +26,4 @@ const submitComment = async () => {
   }
 }
 
-document.querySelector('.btn').addEventListener('click', submitComment)
+document.querySelector('.submit-btn').addEventListener('click', submitComment)
