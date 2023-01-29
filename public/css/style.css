@@ -51,7 +51,8 @@ h3,
   background: var(--green);
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
   color: black;
-  box-shadow: 20px 20px var(--pink);
+  box-shadow: 10px 10px var(--pink);
+  border-radius: 8px;
 }
 
 h4 {
@@ -124,6 +125,7 @@ hr {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  border-radius: 8px;
 }
 .button-56 {
   color: #111;
@@ -143,6 +145,7 @@ hr {
   transform: translate(8px, 8px);
   transition: transform 0.2s ease-out;
   z-index: -1;
+  border-radius: 8px;
 }
 
 .button-56:hover:after {
@@ -201,10 +204,6 @@ hr {
   text-align: left;
 }
 
-/* .center-text {
-  max-width: 50%;
-  margin-left: 200px;
-} */
 .seperator {
   padding: 20px;
 }
@@ -223,12 +222,17 @@ hr {
 .comment-text {
   font-family: 'Space Grotesk', sans-serif;
 }
+.card {
+  border-radius: 8px;
+}
 .card-header {
   background-color: var(--purple);
   color: var(--pink);
+  border-radius: 8px;
 }
 .card-header:hover {
   color: var(--green);
+  border-radius: 8px;
 }
 .user-comment {
   margin: 20;
@@ -236,8 +240,9 @@ hr {
   position: relative;
   width: 400px;
   height: 80px;
-  background: var(--pink);
+  background: var(--purple);
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
-  color: black;
-  box-shadow: 20px 20px var(--purple);
+  color: white;
+  box-shadow: 10px 10px var(--pink);
+  border-radius: 8px;
 }
