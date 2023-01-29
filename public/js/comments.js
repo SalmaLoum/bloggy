@@ -2,6 +2,7 @@ const submitComment = async () => {
   const comments = document.querySelector('#comment')
   const bloggy_id = document.querySelector('#bloggy')
   let blogId = bloggy_id.getAttribute('data-id')
+
   console.log(blogId)
   if (comment) {
     console.log(comment)
@@ -25,4 +26,4 @@ const submitComment = async () => {
   }
 }
 
-// document.querySelector('.submit-btn').addEventListener('click', submitComment)
+document.querySelector('.comment-btn').addEventListener('click', submitComment)

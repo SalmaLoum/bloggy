@@ -1,0 +1,63 @@
+<div class='text-center'>
+  <h1>
+    {{name}}
+  </h1>
+  <div class='card w-100'>
+    <div id='bloggy-list' data-id= "{{blog_id}}" ></div>
+    <div class='card-header'>
+      <h5>
+       {{title}}
+      </h5>
+    </div>
+    <div class='card-body'>
+      <blockquote class='blockquot center-text'>
+              <h5 class='comment-text'>
+                {{description}}
+              </h5>
+    </div>
+     <br />
+     <br />
+              <footer class='blockquote-footer'>
+                <cite title='Source Title'>
+                 By {{user.name}} | On {{blog_date}}
+                </cite>
+              </footer>
+            </blockquote>
+
+  </div>
+  <div>
+    <br />
+    <div>
+      <h5 class ='user-comment'>
+       Comment on this blog post below!
+      </h5>
+
+      <br />
+
+      <div class='form-group'>
+        <label for='exampleFormControlTextarea2'></label>
+        <textarea
+          placeholder='Type your comment here...'
+          class='form-control comment'
+          id='comment'
+          rows='3'
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <p>
+    <button class='button-56 comment-btn' role='button'>
+      Click here to comment
+    </button>
+  </p>
+
+  {{#each comments as |comment|}}
+    <ul class='list-group list-group-flush'>
+      <li class='list-group-item list-group-item-info'>
+        | {{comments.comment}}
+      </li>
+    </ul>
+  {{/each}}
+</div>

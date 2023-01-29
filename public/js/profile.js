@@ -63,6 +63,10 @@ document
   .querySelector('.bloggy-form')
   .addEventListener('submit', newFormHandler)
 
+  
+document
+  .querySelector('#bloggy-list')
+  .addEventListener('click', delButtonHandler)
+
 // var deleteBtn = document.querySelector('#bloggy-list')
-// onsole.log(deleteBtn)
 // deleteBtn.addEventListener('click', delButtonHandler)
