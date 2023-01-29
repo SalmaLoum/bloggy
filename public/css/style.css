@@ -9,6 +9,7 @@
   --green: #7bb397;
   --pink: #fee6e3;
   --light: #fff;
+  --warning: #b84e74;
   --purple: #310762;
   --radius: 50px;
   --center: center;
@@ -202,21 +203,23 @@ hr {
   text-align: left;
 }
 
-.center-text {
+/* .center-text {
   max-width: 50%;
   margin-left: 200px;
-}
+} */
 .seperator {
   padding: 20px;
 }
 
 .input-error {
-  border: 4px #310762 solid;
+  border: 4px var(--warning) solid;
 }
 .error-text {
-  color: #310762;
+  color: var(--warning);
   font-size: bold;
-  text-shadow: 1px 2px 2px black;
+  font-weight: bold;
+  letter-spacing: 1px;
+  /* text-shadow: 1px 1px 1px black; */
   margin: 20px;
 }
 .comment-text {

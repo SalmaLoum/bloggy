@@ -21,9 +21,8 @@ const submitComment = async () => {
 
     if (response.ok) {
       document.location.replace(`/bloggy/${blogId}`)
-    } else {
     }
   }
 }
 
-document.querySelector('.submit-btn').addEventListener('click', submitComment)
+// document.querySelector('.submit-btn').addEventListener('click', submitComment)

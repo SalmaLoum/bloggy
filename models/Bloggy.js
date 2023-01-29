@@ -28,13 +28,13 @@ Bloggy.init(
       allowNull: false,
       // defaultValue: DataTypes.NOW,
     },
-    user_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+
+    // user_name: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
 
     // user_id referencing ID of User who created this blog
-
     user_id: {
       type: DataTypes.INTEGER,
       references: {

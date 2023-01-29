@@ -13,18 +13,18 @@
     {{/if}}
 
     {{>bloggy-form}}
-      {{#if blogs.length}}
+      {{#if bloggies.length}}
         <div class='col-md-6'>
           <h4>
             Current Blogs
           </h4>
 
-          {{#each blogs as |bloggy|}}
+          {{#each bloggies as |bloggy|}}
             <div class='row mb-2'>
               <div class='col-md-8'>
                 <h2>
                   <a href="/bloggy/{{bloggy.id}}">
-                    {{bloggy.name}}
+                    {{bloggy.title}}
                   </a>
                 </h2>
               </div>
