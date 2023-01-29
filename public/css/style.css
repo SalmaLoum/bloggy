@@ -230,10 +230,18 @@ hr {
   color: var(--pink);
   border-radius: 8px;
 }
-.card-header:hover {
+
+.header-link {
+  background-color: var(--purple);
+  color: var(--pink);
+  border-radius: 8px;
+}
+
+.header-link:hover {
   color: var(--green);
   border-radius: 8px;
 }
+
 .user-comment {
   margin: 20;
   padding: 20;
