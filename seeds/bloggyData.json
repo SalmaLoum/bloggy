@@ -2,7 +2,7 @@
   {
     "user_name": "Jack",
     "title": "Why is MVP so important",
-    "description": "MVP allows developers to maintain a true seperation of concerns, devising their code between the Model layer for data, the view layer for design, and the Controller layer for application logic",
+    "description": "MVP allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the view layer for design, and the Controller layer for application logic",
     "blog_date": "01/20/2023"
   },
   {

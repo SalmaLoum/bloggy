@@ -184,17 +184,11 @@ hr {
   margin-top: 30px;
 }
 
-.cloudinary-button {
-  background-color: black;
-}
 
 .container {
   max-width: 2000px;
 }
 
-.cloudinary-button {
-  background-color: black;
-}
 
 .opportunity {
   justify-content: center;
@@ -204,7 +198,7 @@ hr {
   text-align: left;
 }
 
-.seperator {
+.Separator {
   padding: 20px;
 }
 
