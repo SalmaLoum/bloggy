@@ -3,7 +3,7 @@
     {{name}}
   </h1>
   <div class='card w-100'>
-    <div id='bloggy-list' data-id= "{{blog_id}}" ></div>
+    <div id="bloggy" data-id= "{{id}}" ></div>
     <div class='card-header blog'>
       <h5>
        {{title}}
@@ -55,9 +55,11 @@
 
   {{#each comments as |comment|}}
     <ul class='list-group list-group-flush'>
-      <li class='list-group-item list-group-item-info'>
-        | {{comments.comment}}
+      <li class='list-group-item list-group-item-success'>
+       {{user_id.comments}} | {{comment.comments}} | on {{blog_date.bloggy}}
       </li>
     </ul>
   {{/each}}
 </div>
+
+<script src='/js/comments.js'></script>

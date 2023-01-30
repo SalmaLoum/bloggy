@@ -17,7 +17,7 @@ Bloggy.belongsTo(User, {
 })
 
 Bloggy.hasMany(Comments, {
-  foreignKey: 'bloggy_id',
+  foreignKey: 'blog_id',
 })
 
 Comments.belongsTo(User, {

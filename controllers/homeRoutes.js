@@ -45,6 +45,8 @@ router.get('/bloggy/:id', async (req, res) => {
 
     const bloggy = bloggyData.get({ plain: true })
 
+    console.log(bloggy)
+    // res.json(bloggy)
     res.render('bloggy', {
       ...bloggy,
       logged_in: req.session.logged_in,

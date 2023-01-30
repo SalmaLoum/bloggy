@@ -1,15 +1,17 @@
 const submitComment = async () => {
-  const comments = document.querySelector('#comment')
+  const comments = document.querySelector('#comment').value
   const bloggy_id = document.querySelector('#bloggy')
   let blogId = bloggy_id.getAttribute('data-id')
 
+  console.log('I made it here!')
+
   console.log(blogId)
-  if (comment) {
-    console.log(comment)
+  if (comments) {
+    console.log(comments)
 
     let input = JSON.stringify({
       comments,
-      bloggy_id: blogId,
+      blog_id: blogId,
     })
 
     const response = await fetch(`/api/comments/`, {
@@ -25,5 +27,4 @@ const submitComment = async () => {
     }
   }
 }
-
 document.querySelector('.comment-btn').addEventListener('click', submitComment)

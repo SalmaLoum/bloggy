@@ -1,6 +1,5 @@
 const newFormHandler = async (event) => {
   event.preventDefault()
-  console.log('I made it here')
 
   const title = document.querySelector('#blog-title').value.trim()
   const description = document.querySelector('#description').value.trim()
@@ -66,26 +65,25 @@ const editBtnHandler = async (event) => {
     const response = await fetch(`/api/bloggy/${id}`)
     const data = await response.json()
     console.log(data)
-
-    title.value = data.title
+    title = data.title
     description.value = data.description
   }
 }
 
-const response = await fetch(`/api/bloggy/`, {
-  method: 'PUT',
-  body: input,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-})
+// const response = await fetch(`/api/bloggy/`, {
+//   method: 'PUT',
+//   body: input,
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// })
 
 document
   .querySelector('.bloggy-form')
   .addEventListener('submit', newFormHandler)
 
-//looping through the delete button ti delete any post.
-let deleteBtn = document.querySelectorAll('#bloggy-list')
+//looping through the delete button to delete any post
+let deleteBtn = document.querySelectorAll('.bloggy-list')
 for (let i = 0; i < deleteBtn.length; i++) {
   deleteBtn[i].addEventListener('click', delBtnHandler)
 }
@@ -93,4 +91,5 @@ for (let i = 0; i < deleteBtn.length; i++) {
 let editBtn = document.querySelectorAll('#bloggy-edit')
 for (let i = 0; i < editBtn.length; i++) {
   editBtn[i].addEventListener('click', editBtnHandler)
+  console.log('clicked')
 }
