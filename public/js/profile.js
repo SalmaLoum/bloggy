@@ -87,18 +87,18 @@ const editPostHandler = async (event) => {
   const input = {
     title: title.value,
     description: description.value,
-    date: date.value,
+    blog_date: date.value,
   }
 
   const updatedPost = await fetch(`/api/bloggy/${id}`, {
     method: 'PUT',
-    body: input,
+    body: JSON.stringify(input),
     headers: {
       'Content-Type': 'application/json',
     },
   })
   if (updatedPost.ok) {
-    alert('update failed!')
+    document.location.reload()
   }
 }
 

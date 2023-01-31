@@ -184,11 +184,9 @@ hr {
   margin-top: 30px;
 }
 
-
 .container {
   max-width: 2000px;
 }
-
 
 .opportunity {
   justify-content: center;
@@ -248,3 +246,8 @@ hr {
   box-shadow: 10px 10px var(--pink);
   border-radius: 8px;
 }
+
+/* .list-group-item-success {
+  color: black;
+  background-color: white;
+} */

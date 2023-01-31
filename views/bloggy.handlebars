@@ -53,10 +53,15 @@
     </button>
   </p>
 
+  <h4> Previous comments</h4>
   {{#each comments as |comment|}}
+
     <ul class='list-group'>
       <li class='list-group-item list-group-item-action list-group-item-success'>
-       {{comment.user.name}} | {{comment.comments}} 
+      {{comment.comments}} 
+      <br/>
+      <br>
+      <p class="blockquote-footer">Comment by {{comment.user.name}}  | On {{format_date comment.date_created}}</p>
       </li>
     </ul>
   {{/each}}
