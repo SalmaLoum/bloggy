@@ -1,10 +1,5 @@
 [
   {
-    "name": "Salma",
-    "email": "salma@gmail.com",
-    "password": "password1234"
-  },
-  {
     "name": "Jack",
     "email": "Jackarro@gmail.com",
     "password": "password5678"
@@ -13,5 +8,25 @@
     "name": "Zeinab",
     "email": "zozo@gmail.com",
     "password": "password91011"
+  },
+  {
+    "name": "Salam",
+    "email": "salma@gmail.com",
+    "password": "password1234"
+  },
+  {
+    "name": "Rere",
+    "email": "rere@gmail.com",
+    "password": "password174893"
+  },
+  {
+    "name": "Sam",
+    "email": "sam@gmail.com",
+    "password": "password95037"
+  },
+  {
+    "name": "Pamela",
+    "email": "pam@gmail.com",
+    "password": "passwordPam12"
   }
 ]
