@@ -4,7 +4,7 @@
 
 ## Description
 
-![Bloggy]()
+![Bloggy](../bloggy/assets/bloggy-gif.gif)
 
 ## Table of Contents
 
