@@ -17,17 +17,31 @@
 
 ## Installation
 
-Go to [app page]() and follow the prompts.
+Go to [app page](https://radiant-eyrie-09127.herokuapp.com/) and follow the prompts.
 
 ## Usage
 
 - Click on the `login` button on the homepage to sign up for a new profile, or login to your exisiting profile.
 
-- When you're directed to the Profile page you'll be able to add your blog page. Make sure you add all the information needed, to create a new blog post.
+- When you're directed to the Profile page you'll be able to add your blog post. Make sure you add all the information needed, to create a new blog post.
 
 - Your blog will be displayed on the right side of your profile page.
 
+- Click on the "Edit" button to regenerate that posts info and edit them, but clicking the "Edit" button on the bottom of the page.
+
+- Once your post is edited it'll be repopulated in place of your old post on the right side.
+
 - Click on the blog post to view its details.
+
+- On your post's page add a comment by typing in the comment box and clicking the "Add a comment" button. 
+
+- Your comment will appear on the bottom of the post.
+
+- Click on "Bloggy" on the top of the page to be redirected to the main page, to view all blog posts, and adding a comment to each by clicking each blog post.
+
+- Click on "Dashboard" to be redirected to your page, to add a new post or edit an existing post.
+
+- Click "Logout" to be logged out of your page.
 
 ## Applications used:
 
